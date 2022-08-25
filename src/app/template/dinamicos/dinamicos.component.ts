@@ -11,4 +11,8 @@ export class DinamicosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  guardar() {
+    console.log('Formulario posteado')
+  }
+
 }
