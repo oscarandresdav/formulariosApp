@@ -1,7 +1,7 @@
 <h2>Reactivos: Switches</h2>
 <hr>
 
-<form>
+<form [formGroup]="miFormulario">
 
   <!-- Radio -->
   <div class="row mb-3">
@@ -12,7 +12,7 @@
         <input class="form-check-input" 
                type="radio" 
                value="M"
-               name="radioGenero" 
+               formControlName="genero"
                id="radioMasculino">
                <label class="form-check-label" for="radioMasculino">
                  Masculino
@@ -22,7 +22,7 @@
         <input class="form-check-input" 
                type="radio" 
                value="F"
-               name="radioGenero" 
+               formControlName="genero"
                id="radioFemenino">
                <label class="form-check-label" for="radioFemenino">
                 Femenino
@@ -40,6 +40,7 @@
         <input class="form-check-input" 
                type="checkbox" 
                role="switch"
+               formControlName="notificaciones"
                id="flexSwitchCheckChecked">
         <label class="form-check-label" for="flexSwitchCheckChecked">Quiero recibir notificaciones</label>
       </div>
@@ -55,6 +56,7 @@
       <div class="form-check">
         <input class="form-check-input" 
                type="checkbox"
+               formControlName="condiciones"
                id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
           Términos y condiciones de uso
@@ -75,7 +77,7 @@
 
 </form>
 
-<!-- 
+
 <h4>Valor del formulario</h4>
 <pre>{{ miFormulario.value | json }}</pre>
 
@@ -85,4 +87,4 @@
 <h4>Valid</h4>
 <pre>{{ miFormulario.valid }}</pre>
 
-<h4>Condiciones</h4> -->
+<h4>Condiciones</h4>
