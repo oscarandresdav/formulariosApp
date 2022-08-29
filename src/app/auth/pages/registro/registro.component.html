@@ -29,8 +29,16 @@
                  formControlName="email"
                  placeholder="Email del usuario">
           <span class="form-text text-danger"
-                *ngIf="campoNoValido('email')">
+                *ngIf="emailRequerido()">
             El correo es obligatorio
+          </span>
+          <span class="form-text text-danger"
+                *ngIf="emailFormato()">
+            El formato del correo es incorrecto "correo@correo.com"
+          </span>
+          <span class="form-text text-danger"
+                *ngIf="emailTomado()">
+            El correo electronico ya existe
           </span>
         </div>
       </div>
